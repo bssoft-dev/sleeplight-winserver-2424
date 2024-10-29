@@ -128,7 +128,7 @@ def analyze_sleep_groups(indices, df, sleep_start_id, sleep_end_id, hold_step=30
             }
 
             # 코골이 모델 준비
-            generalization_value = 100
+            generalization_value = 200
             snoring_model_file = 'models/snoring_model.pkl'
             snoring_model = pickle.load(open(snoring_model_file, 'rb'))
 

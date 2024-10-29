@@ -115,7 +115,13 @@ if __name__ == "__main__":
                         session.add(sleep_result)
                         session.commit()
                         print("수면 분석 결과가 데이터베이스에 저장되었습니다.")
-                        
+
+                        run_id = sleep_result.id
+
+                        # 수면으로 판단한 모든 realtime_data에 run_id 업데이트
+                        session.query(RealtimeData).filter(RealtimeData.id.between(sleep_start_id, sleep_end_id)).update({RealtimeData.run_id: run_id})
+                        session.commit()
+
                         # 분석 완료 후 전역 변수 초기화
                         sleep_start_id = None
                         sleep_end_id = None

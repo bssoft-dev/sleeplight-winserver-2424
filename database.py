@@ -21,6 +21,7 @@ class RealtimeData(Base):
     sleep_state = Column(SMALLINT, nullable=True)
     sound_value = Column(SMALLINT, nullable=True)
     temp_value = Column(SMALLINT, nullable=True)
+    run_id = Column(Integer, nullable=True)
     time = Column(Integer)
 
     def __repr__(self):
@@ -35,6 +36,7 @@ class SleepResultData(Base):
     total_sleep_time = Column(String, nullable=True)
     light_sleep_time = Column(String, nullable=True)
     deep_sleep_time = Column(String, nullable=True)
+    deep_sleep_range = Column(String, nullable=True)
     hr_max = Column(Double, nullable=True)
     hr_min = Column(Double, nullable=True)
     hr_mean = Column(Double, nullable=True)
