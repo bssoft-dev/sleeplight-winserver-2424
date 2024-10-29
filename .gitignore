@@ -1,3 +1,4 @@
+*.ipynb
 env.py
 log.txt
 __pycache__/
