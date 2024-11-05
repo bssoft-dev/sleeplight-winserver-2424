@@ -46,6 +46,7 @@ class SleepResultData(Base):
     total_snoring_time = Column(String, nullable=True)
     snoring_num = Column(Integer, nullable=True)
     snoring_time = Column(String, nullable=True)
+    deep_sleep_range = Column(String, nullable=True)
     
     def __repr__(self):
         return f"SleepResult(id={self.id}, sleep_start='{self.sleep_start}', sleep_end='{self.sleep_end}')"
